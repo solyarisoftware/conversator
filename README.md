@@ -2,7 +2,7 @@
 Route Telegram chat conversations from many users to many operators (both humans or bots) 
 
 # Motivation / Goal
-Working around conversational commerce messaging apps (see [my microblog](www.twitter.com/solyarisoftware) for news), I came with a typical help desk/customer care "problem": route incoming customers requestes to a pool of operators.
+Working around conversational commerce messaging apps, I came with a typical help desk/customer care "problem": route incoming customers requestes to a pool of operators.
 
 The gist is to realize a Telegram bot that act as *multiplexer* routing incoming users/customers requests to some operators, that could be or humans or bots applications (NLP-enabled to converstate with users).
 
@@ -47,10 +47,11 @@ The multiplecing logic could be decided by an *hypervisor/scheduler* (round robi
 ```
 
 # Code
-Ruby code coming soon.
+**Ruby code coming soon!**
 The Telegram bot logic is pretty simple: every user/operator is identified by a permenent `chat_id`, so `conversational sessions` statuses/profiling/routes data could be stored. 
 
 
 # Contact
 * **IF YOU LIKE THE IDEA, PLEASE SHARE AND VOTE THE PROJECT**
 * mail: [giorgio.robino@gmail.com](mailto:giorgio.robino@gmail.com)
+* blog: [@solyarisoftware](http://www.twitter.com/solyarisoftware)
