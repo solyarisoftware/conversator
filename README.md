@@ -52,6 +52,6 @@ The Telegram bot logic is pretty simple: every user/operator is identified by a 
 
 
 # Contact
-* **IF YOU LIKE THE IDEA, PLEASE SHARE AND VOTE THE PROJECT**
+* **IF YOU LIKE THE IDEA: 1. VOTE THE PROJECT, 2: SHARE/CONTRIBUTE 3: CONTACT ME **
 * mail: [giorgio.robino@gmail.com](mailto:giorgio.robino@gmail.com)
 * blog: [@solyarisoftware](http://www.twitter.com/solyarisoftware)
