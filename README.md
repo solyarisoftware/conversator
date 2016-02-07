@@ -21,36 +21,37 @@ The important point is: WHO is the *operator* ?
 # Architecture
 The multiplexing logic could be decided by an *hypervisor/scheduler* (round robin routing among available operators). Profiling  logics could be implemented easily. A profit scenario could foresee to let the user talk with a specific Person, maybe a very specilized operator, etc. etc.
 
+Routing have to be dynamic: as soon a conversation between an user and an operator end, the operator pass from state `busy` to `free` and could converse with a new user. A human operator could decide himself to become available for a new conversation (e.g. submitting a `/start` command to the hypervisor bot), and where a conversation is concluded (e.g. submitting a `/stop` command to the hypervisor bot). Afterall, with some implicit logic, a bot operator could do the same :-). 
+
 ```
-       BOTMpx + dialog multiplexer
-       +------+-------------------------------------------------------+
+       +--------------------------------------------------------------+
        |                                                              |
-       |      +-----------------------------------------------+       | human admimnistrator
-       |      | sw hypervisor logic / scheduler               +----------------------------+
+       |      +-----------------------------------------------+       | human admin
+       |      | sw hypervisor logic / scheduler               +--------------------
        |      |                                               |       |
-       |      +---------------------+--^----------------------+       |
-       |                            |  |                              |
-       |                            |  |                              |
-       |      +---------------------v--+----------------------+       |
+       |      +-----------------------------------------------+       |
+       |                            |  ^                              |
+       |                            v  |                              |
+       |      +-----------------------------------------------+       |
  user  |      |                                               |       | human operator
-+-------------+ +---------------+         +-----------------> +----------------------+ Giorgio
+ -----------> + <---------------+         +-----------------> + <------------ Giorgio
        |      |                 |         |                   |       |
  user  |      |                 |         |                   |       | human operator
-+-------------+ +---^     +---------------------------------> +----------------------+ Giuditta
+ -----------> + <---+     +---------------------------------> + <------------ Giuditta
        |      |     |     |     |         |                   |       |
  user  |      |     |     |     |         |                   |       | human operator
-+-------------+ +---------------------------------+    +----> +----------------------+ Luca
+ -----------> + <---------------------------------+    +----> + <------------ Luca
        |      |     |     |     |         |       |    |      |       |
        |      |     |     |     |         |       |    |      |       |
        |      |     +----------------------------------+      |       |
-       |      |           |     |         |       |           |       | bot operator instance
-       |      |           |     |         |       +---------> +-----------------------------+
+       |      |           |     |         |       |           |       | bot operator
+       |      |           |     |         |       +---------> + <---------- instance
        |      |           |     |         |                   |       |
- user  |      |           |     |         |                   |       | bot operator instance
-+-------------+ +---------^     ^---------------------------> +-----------------------------+
+ user  |      |           |     |         |                   |       | bot operator
+ -----------> + <---------+     +---------------------------> + <---------- instance
        |      |                           |                   |       |
- user  |      |                           |                   |       | bot operator instance
-+-------------+ +-------------------------+                   +-----------------------------+
+ user  |      |                           |                   |       | bot operator
+ -----------> + <-------------------------+                   + <---------- instance
        |      |                                               |       |
        |      +-----------------------------------------------+       |
        |                                                              |
