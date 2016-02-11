@@ -1,12 +1,15 @@
-# BOTmultiplexer
+# Conversator
 Route Telegram chat conversations from many users to many operators (both humans or bots) 
+[](https://upload.wikimedia.org/wikipedia/commons/e/e0/Telephony_multiplexer_system.gif)
+
+> ** NOTE: This is just a DRAFT readme/manifesto**. I'll develop asap the real code (in Ruby language).
 
 # Motivation / Goal
-Working around conversational commerce messaging apps, I came with a typical help desk/customer care need: route incoming customers requests to a chat bot to a pool of operators.
+Working around conversational commerce messaging apps, and specifically thinking about a chat bot on the [telegram](http://www.telegram.org) instant messaging platform,  I face with a typical call center/help desk/customer care task: **to route incoming customers requests to a chat bot to a pool of operators**.
 
-The gist here is to realize a (Telegram) bot that act as *multiplexer* routing incoming users/customers requests to some operators, that could be or humans or bots applications (NLP-enabled to converstate with users).
+The gist here is to realize a bot framework that act as *multiplexer/demultiplexer* routing incoming users/customers requests to some **operators, that could be or humans or bots applications (NLP-enabled to converstate with users)**.
 
-This is useful for a typical customer care scenario, where customers could contact a *contact center* (realized here through a Telegram bot account) to talk with an operator getting some info, or to solve an issue, or to purchase something (conversational ecommerce).   
+This is useful for a standard customer care scenario, where customers could contact a *contact center* (realized here through a Telegram bot account) to talk with an operator, to have any sort of *service*: getting some info, or to solve an issue with the help pf an expert (see healthcare assistance/patient monitoring), or to purchase something (conversational ecommerce).   
 
 A bot act as a front-end to customers, 
 * verifying id user is new, or retrieving his previous *session data*
@@ -64,6 +67,9 @@ The Telegram bot logic is pretty simple: every user/operator is identified by a 
 
 
 # Contact
-* **If you like this project, 1. VOTE it here!, 2: share&contribute 3: contact me**
+* If you like this project, 
+  1. VOTE it here!, 
+  2. share&contribute
+  3. Contact me, via email
 * mail: [giorgio.robino@gmail.com](mailto:giorgio.robino@gmail.com)
 * blog: [@solyarisoftware](http://www.twitter.com/solyarisoftware)
