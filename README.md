@@ -1,5 +1,5 @@
 # Conversator
-A bot that sstablish Telegram chat conversations from many users to many operators (both humans or bots!).
+Chat bot conversations *router*:  framework to connect users to operators (*humans* or *bots*).
 
 > **NOTE: This is just a DRAFT readme/manifesto**. I'll develop asap the software code, in Ruby language.
 
