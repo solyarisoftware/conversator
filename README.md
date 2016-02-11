@@ -27,38 +27,36 @@ The multiplexing logic could be decided by an *hypervisor/scheduler* (round robi
 Routing have to be dynamic: as soon a conversation between an user and an operator end, the operator pass from state `busy` to `free` and could converse with a new user. A human operator could decide himself to become available for a new conversation (e.g. submitting a `/start` command to the hypervisor bot), and where a conversation is concluded (e.g. submitting a `/stop` command to the hypervisor bot). Afterall, with some implicit logic, a bot operator could do the same :-). 
 
 ```
-       +--------------------------------------------------------------+
-       |                                                              |
-       |      +-----------------------------------------------+       | human admin
-       |      | sw hypervisor logic / scheduler               +--------------------
-       |      |                                               |       |
-       |      +-----------------------------------------------+       |
-       |                            |  ^                              |
-       |                            v  |                              |
-       |      +-----------------------------------------------+       |
- user  |      |                                               |       | human operator
- -----------> + <---------------+         +-----------------> + <------------ Giorgio
-       |      |                 |         |                   |       |
- user  |      |                 |         |                   |       | human operator
- -----------> + <---+     +---------------------------------> + <------------ Giuditta
-       |      |     |     |     |         |                   |       |
- user  |      |     |     |     |         |                   |       | human operator
- -----------> + <---------------------------------+    +----> + <------------ Luca
-       |      |     |     |     |         |       |    |      |       |
-       |      |     |     |     |         |       |    |      |       |
-       |      |     +----------------------------------+      |       |
-       |      |           |     |         |       |           |       | bot operator
-       |      |           |     |         |       +---------> + <---------- instance
-       |      |           |     |         |                   |       |
- user  |      |           |     |         |                   |       | bot operator
- -----------> + <---------+     +---------------------------> + <---------- instance
-       |      |                           |                   |       |
- user  |      |                           |                   |       | bot operator
- -----------> + <-------------------------+                   + <---------- instance
-       |      |                                               |       |
-       |      +-----------------------------------------------+       |
-       |                                                              |
-       +--------------------------------------------------------------+
+
+              +-----------------------------------------------+   
+              |  hypervisor logic / scheduler                 +--> human system admin
+              |                                               |       
+              +-----------------------------------------------+       
+                                    |  ^                              
+                                    v  |                              
+              +-----------------------------------------------+       
+ user         |                                               |      
+ -----------> | <---------------+         +-----------------> | <-- human operator: Giorgio
+              |                 |         |                   |       
+ user         |                 |         |                   |        
+ -----------> | <---+     +---------------------------------> | <-- human operator: Giuditta
+              |     |     |     |         |                   |       
+ user         |     |     |     |         |                   |        
+ -----------> | <---------------------------------+    +----> | <-- human operator: Luca
+              |     |     |     |         |       |    |      |       
+              |     |     |     |         |       |    |      |       
+              |     +----------------------------------+      |       
+              |           |     |         |       |           |        
+              |           |     |         |       +---------> | <-- bot operator, instance
+              |           |     |         |                   |       
+ user         |           |     |         |                   |      
+ -----------> | <---------+     +---------------------------> | <-- bot operator, instance
+              |                           |                   |       
+ user         |                           |                   |       
+ -----------> | <-------------------------+                   | 
+              |                                               |       
+              +-----------------------------------------------+       
+
 ```
 
 # Code
@@ -68,8 +66,8 @@ The Telegram bot logic is pretty simple: every user/operator is identified by a 
 
 # Contact
 * If you like this project, 
-  1. VOTE it here!, 
-  2. share&contribute
+  1. **Give a START to the project here!**, 
+  2. share and contribute!
   3. Contact me, via email
 * mail: [giorgio.robino@gmail.com](mailto:giorgio.robino@gmail.com)
 * blog: [@solyarisoftware](http://www.twitter.com/solyarisoftware)
