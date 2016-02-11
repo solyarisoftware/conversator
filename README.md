@@ -1,6 +1,6 @@
 # Conversator
 Route Telegram chat conversations from many users to many operators (both humans or bots) 
-[](https://upload.wikimedia.org/wikipedia/commons/e/e0/Telephony_multiplexer_system.gif)
+![](https://upload.wikimedia.org/wikipedia/commons/e/e0/Telephony_multiplexer_system.gif)
 
 > **NOTE: This is just a DRAFT readme/manifesto**. I'll develop asap the real code (in Ruby language).
 
@@ -59,9 +59,23 @@ Routing have to be dynamic: as soon a conversation between an user and an operat
 
 ```
 
-# Source Ruby Code COMING SOON!
+# Ruby Code COMING SOON!
 
-The Telegram bot logic is pretty simple: every user/operator is identified by a permenent `chat_id`, so `conversational sessions` statuses/profiling/routes data could be stored. 
+The conversator alghorithm is pretty simple; in the Telegram Bot platform, everyone connected to a bot (specifically in this context: an *user*, an *operator*) is identified by a permenent `chat_id`.
+`Conversational sessions` statuses, profilings, routes data, could be stored and retrieved to implement the routing logic. 
+
+Pseudocode:
+
+```ruby
+
+#incoming update message
+case
+operator?
+
+
+
+```
+
 
 
 # Contact
