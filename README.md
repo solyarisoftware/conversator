@@ -2,7 +2,7 @@
 Route Telegram chat conversations from many users to many operators (both humans or bots) 
 [](https://upload.wikimedia.org/wikipedia/commons/e/e0/Telephony_multiplexer_system.gif)
 
-> ** NOTE: This is just a DRAFT readme/manifesto**. I'll develop asap the real code (in Ruby language).
+> **NOTE: This is just a DRAFT readme/manifesto**. I'll develop asap the real code (in Ruby language).
 
 # Motivation / Goal
 Working around conversational commerce messaging apps, and specifically thinking about a chat bot on the [telegram](http://www.telegram.org) instant messaging platform,  I face with a typical call center/help desk/customer care task: **to route incoming customers requests to a chat bot to a pool of operators**.
@@ -59,8 +59,8 @@ Routing have to be dynamic: as soon a conversation between an user and an operat
 
 ```
 
-# Code
-**Ruby code coming soon!**<br>
+# Source Ruby Code COMING SOON!
+
 The Telegram bot logic is pretty simple: every user/operator is identified by a permenent `chat_id`, so `conversational sessions` statuses/profiling/routes data could be stored. 
 
 
