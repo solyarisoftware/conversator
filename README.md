@@ -2,7 +2,7 @@
 
 Chat bot conversations *router*:  framework to connect users to operators (*humans* or *bots*).
 
-> **NOTE: This is just a DRAFT readme/manifesto**. I'll develop asap the software code, in Ruby language.
+NOTE: This is just a DRAFT readme/manifesto**.
 
 ## Motivation / Goal
 
@@ -90,6 +90,7 @@ if ( isOperator(chatId) ) {
     else
       forwardMessageTo( new_operator )  
   }
+}
 ```
 
 
